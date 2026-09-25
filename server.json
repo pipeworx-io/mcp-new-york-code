@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/new-york-code",
   "title": "New York Code",
   "description": "New York Consolidated Laws — state statutes by citation.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/new-york-code",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-new-york-code",
