@@ -1,0 +1,36 @@
+[
+  {
+    "name": "ny_law_section",
+    "description": "Get the FULL TEXT of a section of the New York Consolidated Laws — New York state statutes — by citation. \"Penal Law 125.25\" is law \"PEN\", section \"125.25\". Returns the statutory text, its heading and the date that version took effect. Use for \"what does NY Penal Law 125.25 say\", \"text of New York Labor Law 240\", or to check a New York statute a case or contract relies on.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "law": {
+          "type": "string",
+          "description": "New York law id, e.g. \"PEN\" (Penal), \"LAB\" (Labor), \"GOB\" (General Obligations), \"VAT\" (Vehicle and Traffic). Call ny_laws to find one."
+        },
+        "section": {
+          "type": "string",
+          "description": "Section number as cited, e.g. \"125.25\" or \"240\"."
+        }
+      },
+      "required": [
+        "law",
+        "section"
+      ]
+    }
+  },
+  {
+    "name": "ny_laws",
+    "description": "List the New York law corpora — Penal Law is PEN, Labor Law is LAB, Vehicle and Traffic is VAT, and so on — optionally filtered by subject. Use when you know the subject but not the law id, before calling ny_law_section.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string",
+          "description": "Optional filter on the law name, e.g. \"penal\", \"labor\", \"insurance\"."
+        }
+      }
+    }
+  }
+]
